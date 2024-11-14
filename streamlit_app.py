@@ -3,7 +3,7 @@ import joblib
 import numpy as np
 
 # Load the trained Logistic Regression model
-log_reg_model = joblib.load("/workspaces/PCOS-prediction/random_forest_balanced_model.pkl")
+log_reg_model = joblib.load("/workspaces/PCOS-prediction/random_forest_balanced_model.pkl ")
 
 # Set up the Streamlit app
 st.title("PCOS Prediction")
