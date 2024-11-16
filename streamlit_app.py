@@ -6,8 +6,8 @@ import numpy as np
 log_reg_model = joblib.load("models/random_forest_balanced_model.pkl")
 
 # Set up the Streamlit app
-st.title("PCOD Prediction")
-st.write("Enter the details below to check the likelihood of having PCOD.")
+st.title("PCOS Prediction")
+st.write("Enter the details below to check the likelihood of having PCOS.")
 
 # Collect user input with Streamlit widgets
 age = st.number_input("Age:", min_value=0, step=1)
@@ -43,6 +43,6 @@ if st.button("Predict"):
 
     # Interpret prediction
     if prediction[0] == 1:
-        st.success("The user might have PCOD.")
+        st.success("The user might have PCOS.")
     else:
-        st.success("The user does not have PCOD.")
+        st.success("The user does not have PCOS.")
